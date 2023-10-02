@@ -50,7 +50,7 @@ def search(request):
     context = {}
    
        
-    classes = models.Classes.objects.filter(class_category=3).order_by("id")
+    classes = models.Classes.objects.filter(class_department=3).order_by("id")
    
     context ['classes'] = classes
  

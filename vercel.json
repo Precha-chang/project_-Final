@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         {
-            "src": "ชื่อโปรเจค/wsgi.py",
+            "src": "employee_hub/wsgi.py",
             "use": "@vercel/python"
         },
         {
@@ -20,7 +20,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "ชื่อโปรเจค/wsgi.py"
+            "dest": "employee_hub/wsgi.py"
         }
     ]
   

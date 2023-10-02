@@ -1,0 +1,35 @@
+{% extends "blank.html" %} {% block content %}
+<div class="row">
+  <div class="col">
+    <div class="bg-secondary rounded h-100 p-4">
+      <h6 class="mb-4">Special Subjects Table</h6>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">รหัสวิชา</th>
+              <th scope="col">ชื่อรายวิชา</th>
+              <th scope="col">หน่วยกิต</th>
+              <th scope="col">ภาคการศึกษา</th>
+              <th scope="col">ปีการศึกษา</th>
+              <th scope="col">หมวดรายวิชา</th>
+            </tr>
+          </thead>
+          <tbody>
+        {% for class in classes %}
+            <tr>
+              <td>{{class.class_id }}</td>
+              <td>{{class.class_name}}</td>
+              <td>{{class.class_credit}}</td>
+              <td>{{class.class_year}}</td>
+              <td>{{class.semester}}</td>
+              <td>{{class.class_category}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

@@ -17,7 +17,7 @@ def genneral(request):
     context = {}
    
        
-    classes = models.Classes.objects.filter(class_category=1).order_by("id")
+    classes = models.Classes.objects.filter(class_department=1).order_by("id")
    
     context ['classes'] = classes
  
@@ -28,7 +28,7 @@ def special_subjects(request):
     context = {}
    
        
-    classes = models.Classes.objects.filter(class_category=2).order_by("id")
+    classes = models.Classes.objects.filter(class_department=2).order_by("id")
    
     context ['classes'] = classes
  
@@ -39,7 +39,7 @@ def elective_subjects(request):
     context = {}
    
        
-    classes = models.Classes.objects.filter(class_category=3).order_by("id")
+    classes = models.Classes.objects.filter(class_department=3).order_by("id")
    
     context ['classes'] = classes
  

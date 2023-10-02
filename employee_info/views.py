@@ -6,7 +6,7 @@ def index(request):
     context = {}
    
        
-    classes = models.Classes.objects.all().order_by("id")
+    classes = models.Information.objects.all().order_by("id")
    
     context ['classes'] = classes
  
@@ -17,40 +17,40 @@ def genneral(request):
     context = {}
    
        
-    classes = models.Classes.objects.filter(class_department=1).order_by("id")
+    classes = models.Information.objects.filter(class_Department=1).order_by("id")
    
     context ['classes'] = classes
  
    
-    return render(request, 'genneral.html',context)
+    return render(request, 'purchasing.html',context)
 
 def special_subjects(request):
     context = {}
    
        
-    classes = models.Classes.objects.filter(class_department=2).order_by("id")
+    classes = models.Information.objects.filter(class_Department=2).order_by("id")
    
     context ['classes'] = classes
  
    
-    return render(request, 'special_subjects.html',context)
+    return render(request, 'providing.html',context)
 
 def elective_subjects(request):
     context = {}
    
        
-    classes = models.Classes.objects.filter(class_department=3).order_by("id")
+    classes = models.Information.objects.filter(class_Department=3).order_by("id")
    
     context ['classes'] = classes
  
    
-    return render(request, 'elective_subjects.html',context)
+    return render(request, 'aftersale.html',context)
 
 def search(request):
     context = {}
    
        
-    classes = models.Classes.objects.filter(class_department=3).order_by("id")
+    classes = models.Information.objects.filter(class_category=3).order_by("id")
    
     context ['classes'] = classes
  
@@ -67,5 +67,4 @@ def about(request):
  
    
     return render(request, 'about.html',context)
-
 

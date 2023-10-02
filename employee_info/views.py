@@ -6,64 +6,68 @@ def index(request):
     context = {}
    
        
-    classes = models.Information.objects.all().order_by("id")
+    classes = models.Information.objects.all().order_by("fname")
    
-    context ['classes'] = classes
+    context["employees"] = classes
+
  
    
     return render(request, 'home.html',context)
 
-def genneral(request):
+
+def purchasing(request):
     context = {}
    
        
-    classes = models.Information.objects.filter(class_Department=1).order_by("id")
+    classes = models.Information.objects.filter(department=1).order_by("id")
    
-    context ['classes'] = classes
+    context ["employees"] = classes
  
    
     return render(request, 'purchasing.html',context)
-
-def special_subjects(request):
+def providing(request):
     context = {}
    
        
-    classes = models.Information.objects.filter(class_Department=2).order_by("id")
+    classes = models.Information.objects.filter(department=2).order_by("id")
    
-    context ['classes'] = classes
+    context ["employees"] = classes
  
    
     return render(request, 'providing.html',context)
 
-def elective_subjects(request):
+
+
+def aftersale(request):
     context = {}
    
        
-    classes = models.Information.objects.filter(class_Department=3).order_by("id")
+    classes = models.Information.objects.filter(department=3).order_by("id")
    
-    context ['classes'] = classes
+    context ["employees"] = classes
  
    
     return render(request, 'aftersale.html',context)
 
-def search(request):
-    context = {}
+
+# def search(request):
+#     context = {}
    
        
-    classes = models.Information.objects.filter(class_category=3).order_by("id")
+#     classes = models.Information.objects.filter(class_category=3).order_by("id")
    
-    context ['classes'] = classes
+#     context ['classes'] = classes
  
    
-    return render(request, 'elective_subjects.html',context)
+#     return render(request, 'elective_subjects.html',context)
 
 def about(request):
     context = {}
    
        
-    classes = models.Classes.objects.all().order_by("id")
+    classes = models.Information.objects.all().order_by("fname")
    
-    context ['classes'] = classes
+    context ["employees"] = classes
  
    
     return render(request, 'about.html',context)

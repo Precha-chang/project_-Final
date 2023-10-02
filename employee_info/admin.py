@@ -7,8 +7,9 @@ from .models import Department , Information
 @admin.register(Department)
 class DepartmentAdmin(admin.ModelAdmin):
     list_display = ('department',)
+    
 
 
 @admin.register(Information)
 class AuthorAdmin(admin.ModelAdmin):
-    list_display = ('fname', 'lname', 'gender', 'age', 'elevel', 'department')
+    list_display = ('fname', 'lname', 'gender', 'age', 'elevel', 'department' ,)

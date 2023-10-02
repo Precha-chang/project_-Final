@@ -1,14 +1,14 @@
 from django.contrib import admin
-from .models import Category, Classes
+from .models import Department , Information
 
 # Register your models here.
 
 
-@admin.employee_hub(Category)
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('category',)
+@admin.register(Department)
+class DepartmentAdmin(admin.ModelAdmin):
+    list_display = ('department',)
 
 
-@admin.employee_hub(Classes)
+@admin.register(Information)
 class AuthorAdmin(admin.ModelAdmin):
-    list_display = ('class_id', 'class_name', 'class_credit', 'class_year', 'semester', 'class_category')
+    list_display = ('fname', 'lname', 'gender', 'age', 'elevel', 'department')
